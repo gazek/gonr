@@ -16,10 +16,11 @@ type Scanner struct {
 // NewScanner creates a new scanner from a file path an error is returned if the path is invalid
 func NewScanner(f *os.File) *Scanner {
 	// create and return the Scanner struct
-	return newScanner(f)
+	return NewScannerFromReader(f)
 }
 
-func newScanner(r io.Reader) *Scanner {
+// NewScannerFromReader is only public to facilitate testing
+func NewScannerFromReader(r io.Reader) *Scanner {
 	scanner := bufio.NewScanner(r)
 	scanner.Split(bufio.ScanWords)
 	return &Scanner{scanner: scanner}

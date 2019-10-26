@@ -27,11 +27,11 @@ func TestCleanWord(t *testing.T) {
 	}
 }
 
-func TestnewScanner(t *testing.T) {
+func TestNewScannerFromReader(t *testing.T) {
 	text := "foo! (bar) [baz]"
 	tests := strings.Split(text, " ")
 
-	s := newScanner(strings.NewReader(text))
+	s := NewScannerFromReader(strings.NewReader(text))
 
 	// we'll test this by making sure that the created
 	// scanner in the Scanner struct returns the words from
@@ -50,7 +50,7 @@ func TestNext(t *testing.T) {
 	text := "foo! (bar) ... [baz]"
 	tests := []string{"foo", "bar", "baz"}
 
-	s := newScanner(strings.NewReader(text))
+	s := NewScannerFromReader(strings.NewReader(text))
 
 	// we'll test this by making sure that the created
 	// scanner in the Scanner struct returns the words from
