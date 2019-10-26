@@ -34,4 +34,4 @@ I don't think this is a bug but I noticed I got a much lower count when I ran it
 
 ## Extra Credit
 I did attempt 2 of the extra credits. The code handles unicode charaters.  This can be seen in the unit tests.
-Also, I tested it against 288MB (mobydick.txt psted into the same file a bunch of times) file as well as made it open and parse mobydick.txt 1000 times. The memory usage stayed below 20MB for these. This may not represent real world cases too well since the 3-word sequences will all have been seen after the first time through and only the count will increase.
+Also, I tested it against 288MB (mobydick.txt pasted into the same file a bunch of times) file as well as made it open and parse mobydick.txt 1000 times. The memory usage stayed below 20MB for these. This may not represent real world cases too well since the 3-word sequences will all have been seen after the first time through and only the count will increase.
